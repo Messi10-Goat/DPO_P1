@@ -2,6 +2,8 @@ package Consola;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 import ReservasHuespedesPagos.Reservas;
@@ -86,15 +88,26 @@ public class consola {
 							Scanner ar = new Scanner(System.in);
 							String nombre = ar.nextLine();
 							
-							String nombreArchivo = nombre;
+							String nombreArchivo = nombre + ".txt";
 							
-							Habitaciones.cargarArchivoHabitaciones(nombreArchivo);
+							Path archivo = Paths.get(nombreArchivo).toAbsolutePath();
+							
+							String nArchivo = archivo.toString();
+							
+							Habitaciones.cargarArchivoHabitaciones(nArchivo);
+							
 						} else if (opcion1 == 2){
+							
 							Habitaciones.crearNuevasHabitaciones();
+						
 						} else if (opcion1 == 0){
+							
 							System.out.println("Volviendo...");
+							
 						} else {
+							
 							System.out.println("No se ha ingresado una opción valida!");
+						
 						}
 						
 					} else if (sel == 2) {
@@ -111,15 +124,25 @@ public class consola {
 						int opcion2 = op2.nextInt();
 						
 						if (opcion2 == 1) {
+							
 							CatalogoRegistro.cargarTarifas();
+							
 						} else if (opcion2 == 2) {
+							
 							CatalogoRegistro.crearTarifas();
+						
 						} else if (opcion2 == 3) {
+						
 							CatalogoRegistro.cambiarTarifas();
+						
 						} else if (opcion2 == 0) {
+						
 							System.out.println("Volviendo...");
+						
 						} else {
+						
 							System.out.println("No se ha ingresado una opción válida!");
+						
 						}
 						
 					} else if (sel == 3) {
