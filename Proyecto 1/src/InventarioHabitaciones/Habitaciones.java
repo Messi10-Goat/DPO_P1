@@ -4,7 +4,6 @@ package InventarioHabitaciones;
 public class Habitaciones {
 	
 	//Atributos
-	
 	private int numeroHabitaciones;
 	private boolean disponibilidad;
 	private int capacidad;
@@ -18,11 +17,11 @@ public class Habitaciones {
 		
 	}
 	
-	private void cargarArchivoHabitaciones(String archivo) {
+	public void cargarArchivoHabitaciones(String archivo) {
 		
 	}
 	
-	private void crearNuevasHabitaciones() {
+	public void crearNuevasHabitaciones() {
 		
 	}
 	

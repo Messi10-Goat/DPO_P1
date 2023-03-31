@@ -1,0 +1,19 @@
+Capacidad;Identificador;Tipo;Ubicacion;Extras
+6;848hsd;Estándar;PrimerPiso;Balcón
+4;945asd;Suite;TercerPiso;Vista
+5;153hen;SuiteDoble;SextoPiso;Cocina Integrada
+3;437ens;Estándar;ÚltimoPiso;Balcón y Vista
+7;910new;SuiteDoble;PrimerPiso;Vista y Cocina Integrada
+3;153hen;SuiteDoble;SegundoPiso;Cocina Integrada y Balcon
+2;301pwn;Estándar;SeptimoPiso;No
+4;912aos;Estándar;TercerPiso;Vista, Balcón y Cocina Integrada
+5;217dsm;SuiteDoble;PrimerPiso;Vista
+4;438nqw;Estándar;PrimerPiso;No
+3;037sdj;Suite;CuartoPiso;Vista
+2;937dnm;SuiteDoble;SextoPiso;Cocina Integrada
+2;209dsf;Estándar;SegundoPiso;Balcón y Vista
+6;420pen;SuiteDoble;OctavoPiso;Vista y Cocina Integrada
+5;023dla;SuiteDoble;QuintoPiso;No
+2;710sns;Estándar;SeptimoPiso;No
+3;291nas;Estándar;ÚltimoPiso;Balcón y Cocina Integrada
+2;019san;SuiteDoble;ÚltimoPiso;Vista

@@ -6,6 +6,10 @@ import CatalogoServiciosyRegistroConsumos.Tarifas;
 @SuppressWarnings("unused")
 public class CatalogoRegistro {
 	
+	//Cambio de nombre de las importaciones
+	private CatalogoServiciosyRegistroConsumos.Menu Menu;
+	private CatalogoServiciosyRegistroConsumos.Tarifas Tarifas;
+	
 	//Atributos Clase
 	private String fechas;
 	private String nombres;

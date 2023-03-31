@@ -6,8 +6,11 @@ import ReservasHuespedesPagos.Pagos;
 @SuppressWarnings("unused")
 public class Reservas {
 	
-	//Atributos
+	//Cambio de nombre de las importaciones
+	private ReservasHuespedesPagos.Huespedes Huespedes;
+	private ReservasHuespedesPagos.Pagos Pagos;
 	
+	//Atributos
 	private String fechaIncio;
 	private String fechaSalida;
 	private String nombre;
@@ -20,17 +23,21 @@ public class Reservas {
 	
 	//Métodos
 	
+	public void obtenerDatos() {
+		
+	}
+	
 	public void realizarReserva() {
 		
 	}
 	
 	
-	private void cancelarReserva() {
+	public void cancelarReserva() {
 		
 		
 	}
 	
-	private void aplazarReserva() {
+	public void aplazarReserva() {
 		
 	}
 	
@@ -38,6 +45,9 @@ public class Reservas {
 		
 	}
 	
+	public void revisarReserva() {
+		
+	}
 	
 	//Setters & Getters
 	
