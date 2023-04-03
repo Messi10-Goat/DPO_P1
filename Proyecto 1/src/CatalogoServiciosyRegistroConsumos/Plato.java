@@ -1,19 +1,29 @@
 package CatalogoServiciosyRegistroConsumos;
 
 @SuppressWarnings("unused")
-public class Menu {
+public class Plato {
 
 	//Atributos
 	
-	private String desayuno;
-	private String almuerzo;
-	private String cena;
-	private String lugar;
-	private long hora;
+	private String nombre;
+	private Boolean habitacion;
+	private String tipo_plato;
+	private int precio;
+	private String horas;
 	
 	
 	//Métodos
 	
+	public Plato(String nombre2, boolean habitacion2, int valor, String horas2, String tipo_plato2) {
+	// TODO Auto-generated constructor stub
+		this.nombre = nombre2;
+		this.habitacion = habitacion2;
+		this.tipo_plato = tipo_plato2;
+		this.precio = valor;
+		this.horas = horas2;
+	}
+
+
 	public void productosDisponibles() {
 		
 	}

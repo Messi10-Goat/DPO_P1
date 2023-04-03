@@ -1,0 +1,5 @@
+valor;fecha_inico;fecha_fin;dias;tipo_habitacion
+450000;03/01/2023;03/02/2023;LMIJ;Estándar
+560000;03/01/2023;03/02/2023;VSD;Estándar
+1400000;03/01/2023;03/02/2023;LMIJ;Suite
+1500000;03/01/2023;03/02/2023;LMIJ;Suite

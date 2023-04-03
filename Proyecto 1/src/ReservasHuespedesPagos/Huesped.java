@@ -1,14 +1,22 @@
 package ReservasHuespedesPagos;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import CatalogoServiciosyRegistroConsumos.Plato;
+
 @SuppressWarnings("unused")
-public class Huespedes {
+public class Huesped {
 	
 	//Atributos
 	
-	private int numeroHuespedes;
-	private boolean menoresCuatroAños;
+	private String nombre;
+	private int edad;
 	private boolean adultosMayores;
 	private boolean discapacitados;
+	private List<Plato> Platos_consumidos = new ArrayList();
+	private List<Pago> Pagos_hechos = new ArrayList();
+	private List<Pago> Pagos_pendientes = new ArrayList();
 	
 	
 	//Métodos

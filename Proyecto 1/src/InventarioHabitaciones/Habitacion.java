@@ -5,9 +5,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 @SuppressWarnings("unused")
-public class Habitaciones {
+public class Habitacion {
 	
 	//Atributos
 	private int capacidad;
@@ -15,12 +18,21 @@ public class Habitaciones {
 	private String tipo;
 	private String ubicacion;
 	private String extras;
+	private List<String> reservas = new ArrayList();
 	
 	
 	//Métodos
 	
-	public Habitaciones(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2) {
-		// TODO Auto-generated constructor stub
+	public Habitacion(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2) {
+		this.capacidad=capacidad2;
+		this.identificador=identificador2;
+		this.tipo=tipo2;
+		this.ubicacion=ubicacion2;
+		this.extras=extras2;
+	}
+	
+	public Habitacion() {
+		
 	}
 
 	public void actualizarInformacionInventario() {
@@ -28,31 +40,7 @@ public class Habitaciones {
 	}
 	
 	@SuppressWarnings("resource")
-	public void cargarArchivoHabitaciones(String archivo) throws IOException {
-		
-		BufferedReader archivoHabit;
-		archivoHabit = new BufferedReader(new FileReader(archivo)); 
-		
-		String habitacion = archivoHabit.readLine();
-		
-		while(habitacion != null) {
-			String[] partesHabit = habitacion.split(";");
-			int capacidad = parseInt(partesHabit[0]); 
-			String identificador = partesHabit[1];
-			String tipo = partesHabit[2];
-			String ubicacion = partesHabit[3];
-			String extras = partesHabit[4];
-			
-			Habitaciones nuevaH = new Habitaciones(capacidad, identificador, tipo, ubicacion, extras);
-			
-			System.out.println(nuevaH);
-		}
-	}
 	
-
-	public void crearNuevasHabitaciones() {
-		
-	}
 	
 	public void asignarHabitacion() {
 		
@@ -60,8 +48,11 @@ public class Habitaciones {
 
 	public void reservarHabitacion() {
 		
+		
 	}
-
+    private void filtrarHabitacionesporCapacidadyTipo(String tipo,int capacidad) {
+    	
+    }
 	public void cancelarHabitacion() {
 		
 	}
@@ -76,6 +67,20 @@ public class Habitaciones {
 
 	public int getCapacidad() {
 		return capacidad;
+	}
+	public List<String> getReservas() {
+		return reservas;
+	}
+	
+	public void setReservas(List<String> reservas) {
+		
+		this.reservas = reservas;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Habitacion "+identificador+": capacidad: "+capacidad+", tipo: "+tipo+", ubicacion: "+ubicacion;
 	}
 
 	public void setCapacidad(int capacidad) {
@@ -113,6 +118,7 @@ public class Habitaciones {
 	public void setExtras(String extras) {
 		this.extras = extras;
 	}
+
 	
 }
 

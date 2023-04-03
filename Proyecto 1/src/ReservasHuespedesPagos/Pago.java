@@ -1,13 +1,16 @@
 package ReservasHuespedesPagos;
 
 @SuppressWarnings("unused")
-public class Pagos {
+public class Pago {
 
 	//Atributos
 	
 	private double precio;
 	private String metodoPago;
 	private int numeroCuotas;
+	private String servicio;
+	private String estado;
+	
 	
 	//Métodos
 	

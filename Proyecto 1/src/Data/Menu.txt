@@ -1,0 +1,5 @@
+nombre;habitacion;tipo_plato;precio;horas
+Flan de queso;True;plato;15000;8-21
+Crepe Stroganoff;False;plato;27000;12-21
+Huevos pericos;False;plato;10000;8-12
+Limonada natural;True;bebida;8000;8-21

@@ -1,14 +1,16 @@
 package ReservasHuespedesPagos;
 
-import ReservasHuespedesPagos.Huespedes;
-import ReservasHuespedesPagos.Pagos;
+import CatalogoServiciosyRegistroConsumos.Tarifa;
+import InventarioHabitaciones.Habitacion;
+import ReservasHuespedesPagos.Huesped;
+import ReservasHuespedesPagos.Pago;
 
 @SuppressWarnings("unused")
-public class Reservas {
+public class Reserva {
 	
 	//Cambio de nombre de las importaciones
-	private ReservasHuespedesPagos.Huespedes Huespedes;
-	private ReservasHuespedesPagos.Pagos Pagos;
+	private ReservasHuespedesPagos.Huesped Huespedes;
+	private ReservasHuespedesPagos.Pago Pagos;
 	
 	//Atributos
 	private String fechaIncio;
@@ -17,17 +19,31 @@ public class Reservas {
 	private int cedula;
 	private String correo;
 	private int numeroPersonas;
-	private long hora;
+	private String hora;
 	private String tipoHabitacion;
+	private Habitacion habitacion;
+	private Tarifa tarifa;
+	private int codigoReserva;
 	
 	
 	//Métodos
-	
+	public Reserva(Habitacion habitacion,String fecha_inicio, String fecha_final, String nombre, int cedula, String correo, int numero_personas, int codigo_reserva) {
+		this.habitacion = habitacion;
+		this.fechaIncio = fecha_inicio;
+		this.fechaSalida = fecha_final;
+		this.nombre = nombre;
+		this.cedula = cedula;
+		this.correo = correo;
+		this.numeroPersonas = numero_personas;
+		this.codigoReserva = codigo_reserva;
+		
+	}
 	public void obtenerDatos() {
 		
 	}
 	
 	public void realizarReserva() {
+		
 		
 	}
 	
@@ -53,6 +69,12 @@ public class Reservas {
 	
 	public String getFechaIncio() {
 		return fechaIncio;
+	}
+	public int getCodigo() {
+		return codigoReserva;
+	}
+	public Habitacion getHabitacion() {
+		return habitacion;
 	}
 
 	public void setFechaIncio(String fechaIncio) {

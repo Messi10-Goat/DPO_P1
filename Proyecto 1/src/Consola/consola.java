@@ -4,18 +4,20 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
-import ReservasHuespedesPagos.Reservas;
+import ReservasHuespedesPagos.Reserva;
 import CatalogoServiciosyRegistroConsumos.CatalogoRegistro;
-import InventarioHabitaciones.Habitaciones;
+import InventarioHabitaciones.Habitacion;
 
 @SuppressWarnings("unused")
 public class consola {
 	//Cambio de nombre de las importaciones
-	private ReservasHuespedesPagos.Reservas Reservas;
+	private ReservasHuespedesPagos.Reserva Reservas;
 	private CatalogoServiciosyRegistroConsumos.CatalogoRegistro CatalogoRegistro;
-	private InventarioHabitaciones.Habitaciones Habitaciones;
+	private InventarioHabitaciones.Habitacion Habitaciones;
 	
 	//Función MAIN
 	public static void main(String[] args) throws IOException{
@@ -27,10 +29,16 @@ public class consola {
 			try {
 				System.out.println("Sistema del Hotel\n");
 				
+				System.out.println("Ingrese la fecha de hoy en formato dia/mes/año");
+				Scanner ar = new Scanner(System.in);
+				String fecha_hoy = ar.nextLine();
+				
+				
 				consola.menu();
 				System.out.println("\nIngrese una opcion: ");
 				Scanner op = new Scanner(System.in);
 				int opcion = op.nextInt();
+				
 				
 				if (opcion == 0) {
 					continuar = false;
@@ -90,15 +98,33 @@ public class consola {
 							
 							String nombreArchivo = nombre + ".txt";
 							
-							Path archivo = Paths.get(nombreArchivo).toAbsolutePath();
+							Path archivo = Paths.get("src/Data/"+nombreArchivo).toAbsolutePath();
 							
 							String nArchivo = archivo.toString();
 							
-							Habitaciones.cargarArchivoHabitaciones(nArchivo);
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.cargarArchivoHabitaciones(nArchivo);
 							
 						} else if (opcion1 == 2){
 							
-							Habitaciones.crearNuevasHabitaciones();
+							System.out.println("ingrese la capacidad de la habitación");
+							Scanner cap = new Scanner(System.in);
+							int capacidad = cap.nextInt();
+							System.out.println("ingrese el identificador de la habitación");
+							Scanner id = new Scanner(System.in);
+							String identificador = id.nextLine();
+							System.out.println("ingrese el tipo de habitación");
+							Scanner ti = new Scanner(System.in);
+							String tipo = ti.nextLine();
+							System.out.println("ingrese la ubicacion de la habitacion ");
+							Scanner ub = new Scanner(System.in);
+							String ubicacion = ub.nextLine();
+							System.out.println("ingrese los extras que posee la habitacion ");
+							Scanner ex = new Scanner(System.in);
+							String extras = ex.nextLine();
+							
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.crearNuevasHabitaciones(capacidad,identificador,tipo,ubicacion,extras);
 						
 						} else if (opcion1 == 0){
 							
@@ -124,16 +150,76 @@ public class consola {
 						int opcion2 = op2.nextInt();
 						
 						if (opcion2 == 1) {
+                            System.out.println("Ingrese el nombre del archivo");
 							
-							CatalogoRegistro.cargarTarifas();
+							Scanner ar = new Scanner(System.in);
+							String nombre = ar.nextLine();
+							
+							String nombreArchivo = nombre + ".txt";
+							
+							Path archivo = Paths.get("src/Data/"+nombreArchivo).toAbsolutePath();
+							
+							String nArchivo = archivo.toString();
+							
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.cargarTarifas(nArchivo);
+							
+							
+							
 							
 						} else if (opcion2 == 2) {
 							
-							CatalogoRegistro.crearTarifas();
+							System.out.println("ingrese el valor de la tarifa");
+							Scanner cap = new Scanner(System.in);
+							int valor = cap.nextInt();
+							System.out.println("ingrese la fecha inical de la tarifa en formato dia/mes/año");
+							Scanner id = new Scanner(System.in);
+							String fecha_inicio = id.nextLine();
+							System.out.println("ingrese la fecha final de la tarifa en formato dia/mes/año");
+							Scanner ti = new Scanner(System.in);
+							String fecha_fin = ti.nextLine();
+							System.out.println("ingrese los dias que seran validos escribiendo su iniciales ");
+							System.out.println("ejemplo, si vale para los dias Martes, Jueves y Viernes. Escribir MJV");
+							System.out.println("La inicial del miercoles es la I ");
+							Scanner ub = new Scanner(System.in);
+							String dias = ub.nextLine();
+							System.out.println("ingrese el tipo de habitacion ");
+							Scanner ex = new Scanner(System.in);
+							String tipo = ex.nextLine();
+							
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.crearTarifas(valor,fecha_inicio,fecha_fin,dias,tipo);
+							
+							
 						
 						} else if (opcion2 == 3) {
+							System.out.println("ingrese la fecha inicio de la tarifa a cambair");
+							Scanner id = new Scanner(System.in);
+							String fecha_inicio = id.nextLine();
+							System.out.println("ingrese la fecha fin de la tarifa a cambiar");
+							Scanner ti = new Scanner(System.in);
+							String fecha_fin = ti.nextLine();
+							System.out.println("ingrese el tipo de habitacion de la tarifa a cambiar");
+							Scanner ex = new Scanner(System.in);
+							String tipo = ex.nextLine();
+							
+							System.out.println("ingrese los dias en que la tarifa a cambiar es valida");
+							System.out.println("ejemplo, si vale para los dias Martes, Jueves y Viernes. Escribir MJV");
+							System.out.println("La inicial del miercoles es la I ");
+							Scanner ub = new Scanner(System.in);
+							String dias = ub.nextLine();
+							System.out.println("Ingrese el nuevo valor de la tarifa");
+							Scanner cap = new Scanner(System.in);
+							int valor = cap.nextInt();
+							
+							
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.cambiarTarifas(valor,fecha_inicio,fecha_fin,dias,tipo);
+							
+							
+							
 						
-							CatalogoRegistro.cambiarTarifas();
+							
 						
 						} else if (opcion2 == 0) {
 						
@@ -163,8 +249,20 @@ public class consola {
 							CatalogoRegistro.configurarPlato();
 							
 						} else if (opcion5 == 2) {
+System.out.println("Ingrese el nombre del archivo");
 							
-							CatalogoRegistro.cargarMenuRestaurante();
+							Scanner ar = new Scanner(System.in);
+							String nombre = ar.nextLine();
+							
+							String nombreArchivo = nombre + ".txt";
+							
+							Path archivo = Paths.get("src/Data/"+nombreArchivo).toAbsolutePath();
+							
+							String nArchivo = archivo.toString();
+							
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.cargarMenuRestaurante(nArchivo);
+							
 							
 						} else if (opcion5 == 0) {
 							
@@ -218,7 +316,42 @@ public class consola {
 						
 						if (opcion3 == 1) {
 							
-							Reservas.realizarReserva();
+							System.out.println("ingrese a nombre de quien queda la reserva");
+							Scanner id = new Scanner(System.in);
+							String nombre = id.nextLine();
+							System.out.println("ingrese la cedula del cliente");
+							Scanner ced = new Scanner(System.in);
+							int cedula = ced.nextInt();
+							System.out.println("ingrese el correo electrónico del cliente");
+							Scanner cor = new Scanner(System.in);
+							String correo = cor.nextLine();
+							System.out.println("ingrese la fecha inicio de la reserva");
+							Scanner fi = new Scanner(System.in);
+							String fecha_inicio = fi.nextLine();
+							System.out.println("ingrese la final de la reserva");
+							Scanner ff = new Scanner(System.in);
+							String fecha_final = id.nextLine();
+							System.out.println("ingrese el numero de personas de la reserva");
+							Scanner np = new Scanner(System.in);
+							int numero_personas = np.nextInt();
+							System.out.println("Seleccione el tipo de habitacion");
+							Scanner ti = new Scanner(System.in);
+							String tipo_habitacion = ti.nextLine();
+							CatalogoRegistro cat = new CatalogoRegistro();
+							List<Habitacion> habitaciones_objetivo = cat.filtrarHabitacionesporCapacidadyTipo(tipo_habitacion, numero_personas);
+							habitaciones_objetivo.forEach(h ->{
+								System.out.println("Id: " + h.getIdentificador() + ", Extras: " + h.getExtras() + ", Reservas:");
+								System.out.println(h.getReservas().stream().collect(Collectors.joining("\n", "'", "'")));
+							});
+							//Falta poner Proceso de impresion para elegir la habitacion a reservar
+							Scanner op = new Scanner(System.in);
+							int eleccion = op.nextInt();
+							Habitacion habitacion_reserva = habitaciones_objetivo.get(eleccion);
+							cat.crearReserva(habitacion_reserva,fecha_inicio,fecha_final,nombre,cedula,correo,numero_personas);
+							
+							
+							
+							
 							
 						} else if (opcion3 == 2) {
 							
@@ -226,7 +359,20 @@ public class consola {
 							
 						} else if (opcion3 == 3) {
 							
-							Reservas.cancelarReserva();
+							System.out.println("Ingrese el codigo de la reserva a cancelar");
+							Scanner cod = new Scanner(System.in);
+							int codigoReserva = cod.nextInt();
+							CatalogoRegistro cat = new CatalogoRegistro();
+							cat.buscarReserva(codigoReserva);
+							System.out.println("¿Desea eliminar la reserva? 1.si 2.no");
+							Scanner in = new Scanner(System.in);
+							int eleccion = in.nextInt();
+							if (eleccion == 1){
+								
+							}
+							
+							
+							
 							
 						} else if (opcion3 == 0) {
 							
