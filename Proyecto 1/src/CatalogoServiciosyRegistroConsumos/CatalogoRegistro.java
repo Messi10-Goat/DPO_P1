@@ -1,5 +1,5 @@
 package CatalogoServiciosyRegistroConsumos;
-
+// comentario al azar de prueba
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
