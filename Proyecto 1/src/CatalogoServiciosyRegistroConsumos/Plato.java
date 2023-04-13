@@ -5,6 +5,7 @@ public class Plato {
 
 	//Atributos
 	
+	private static long hora = 0;
 	private String nombre;
 	private Boolean habitacion;
 	private String tipo_plato;
@@ -46,35 +47,35 @@ public class Plato {
 	//Setters & Getters
 	
 	public String getDesayuno() {
-		return desayuno;
+		return nombre;
 	}
 
 	public void setDesayuno(String desayuno) {
-		this.desayuno = desayuno;
+		this.nombre = desayuno;
 	}
 
 	public String getAlmuerzo() {
-		return almuerzo;
+		return nombre;
 	}
 
 	public void setAlmuerzo(String almuerzo) {
-		this.almuerzo = almuerzo;
+		this.nombre = almuerzo;
 	}
 
 	public String getCena() {
-		return cena;
+		return nombre;
 	}
 
 	public void setCena(String cena) {
-		this.cena = cena;
+		this.nombre = cena;
 	}
 
 	public String getLugar() {
-		return lugar;
+		return nombre;
 	}
 
 	public void setLugar(String lugar) {
-		this.lugar = lugar;
+		this.nombre = lugar;
 	}
 
 	public long getHora() {

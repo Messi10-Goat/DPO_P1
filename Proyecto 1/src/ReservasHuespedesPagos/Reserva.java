@@ -19,7 +19,7 @@ public class Reserva {
 	private int cedula;
 	private String correo;
 	private int numeroPersonas;
-	private String hora;
+	private long hora;
 	private String tipoHabitacion;
 	private Habitacion habitacion;
 	private Tarifa tarifa;

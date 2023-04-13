@@ -3,6 +3,8 @@ package ReservasHuespedesPagos;
 import java.util.ArrayList;
 import java.util.List;
 
+import CatalogoServiciosyRegistroConsumos.Tour;
+
 public class Grupo {
 	
 	private List<Huesped> integrantes = new ArrayList();
