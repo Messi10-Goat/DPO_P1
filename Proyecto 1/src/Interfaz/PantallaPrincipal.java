@@ -2,49 +2,45 @@ package Interfaz;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import Interfaz.PanPriNor;
+import Interfaz.PanPriSou;
+import Interfaz.PanPriWes;
+import Interfaz.PanPriEas;
+import Interfaz.PanPriCen;
 
-public class PantallaPrincipal extends JFrame{
+@SuppressWarnings({ "unused", "serial" })
+public class PantallaPrincipal extends JFrame implements ActionListener{
 
+	private PanPriNor panPriNor;
+	private PanPriWes panPriWes;
+	private PanPriCen panPriCen;
+	private PanPriEas panPriEas;
+	private PanPriSou panPriSou;
+	
 	public PantallaPrincipal() {
 		
 		setLayout(new BorderLayout());
 		
-		JTextField titulo = new JTextField("SISTEMA HOTEL");
-		titulo.disable();
-		titulo.setFont(getFont());
-		titulo.setForeground(Color.WHITE);
-		titulo.setHorizontalAlignment(SwingConstants.CENTER);
-		titulo.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
+		PanPriNor panPriNor = new PanPriNor();
+		add(panPriNor, BorderLayout.NORTH);
 		
-//		JLabel titulo = new JLabel("SISTEMA HOTEL");
-		titulo.setBackground(Color.MAGENTA);
+		PanPriWes panPriWes = new PanPriWes();
+		add(panPriWes, BorderLayout.WEST);
 		
-		add(titulo, BorderLayout.NORTH);
+		PanPriCen panPriCen = new PanPriCen();
+		add(panPriCen, BorderLayout.CENTER);
 		
+		PanPriEas panPriEas = new PanPriEas();
+		add(panPriEas, BorderLayout.EAST);
 		
-		JButton salir = new JButton("SALIR");
-		salir.setBackground(Color.MAGENTA);
-		salir.setForeground(Color.WHITE);
-		salir.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
-		
-		add(salir, BorderLayout.SOUTH);
+		PanPriSou panPriSou = new PanPriSou();
+		add(panPriSou, BorderLayout.SOUTH);
 		
 		
-		JButton admin = new JButton("ADMINISTRADOR");
-		admin.setBackground(Color.magenta);
-		admin.setForeground(Color.white);
-		
-		add(admin, BorderLayout.WEST);
-		
-		
-		JButton empleado = new JButton("EMPLEADO");
-		empleado.setBackground(Color.magenta);
-		empleado.setForeground(Color.white);
-		
-		add(empleado, BorderLayout.EAST);
-		
-		
+		//Pantalla Principal
 		setTitle("Sistema Hotel");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(1000, 750);
@@ -60,6 +56,14 @@ public class PantallaPrincipal extends JFrame{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new PantallaPrincipal();
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
