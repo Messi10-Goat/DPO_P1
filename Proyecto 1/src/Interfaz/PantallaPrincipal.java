@@ -47,6 +47,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 		setResizable(false);
 		setVisible(true);
 		setLocationRelativeTo(null);
+		setBackground(Color.WHITE);
 		
 		
 	}

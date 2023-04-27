@@ -19,6 +19,7 @@ public class PanPriSou extends JPanel implements ActionListener{
 		salir.setBackground(Color.MAGENTA);
 		salir.setForeground(Color.WHITE);
 		salir.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
+		salir.setBorderPainted(false);
 		
 		//Apartado Espacios
 		ArrayList<JTextField> esp = new ArrayList<JTextField>();
