@@ -24,13 +24,13 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 		
 		setLayout(new BorderLayout());
 		
-		PanPriNor panPriNor = new PanPriNor();
+		PanPriNor panPriNor = new PanPriNor("SISTEMA HOTEL");
 		add(panPriNor, BorderLayout.NORTH);
 		
 		PanPriWes panPriWes = new PanPriWes();
 		add(panPriWes, BorderLayout.WEST);
 		
-		PanPriCen panPriCen = new PanPriCen();
+		PanPriCen panPriCen = new PanPriCen("Administrador","Empleado");
 		add(panPriCen, BorderLayout.CENTER);
 		
 		PanPriEas panPriEas = new PanPriEas();

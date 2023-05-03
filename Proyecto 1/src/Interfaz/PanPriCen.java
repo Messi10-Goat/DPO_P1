@@ -8,20 +8,24 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class PanPriCen extends JPanel implements ActionListener{
+	private String BotonIzq;
+	private String BotonDer;
+	
+		
 
-	public PanPriCen() {
+	public PanPriCen(String BotonIzq,String BotonDer) {
 		
 		setLayout(new GridLayout(3, 5));
 		
 		//Principal
 		
-		JButton admin = new JButton("ADMINISTRADOR");
+		JButton admin = new JButton(BotonIzq);
 		admin.setBackground(Color.magenta);
 		admin.setForeground(Color.white);
 		admin.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		admin.setBorderPainted(false);
 		
-		JButton empleado = new JButton("EMPLEADO");
+		JButton empleado = new JButton(BotonDer);
 		empleado.setBackground(Color.magenta);
 		empleado.setForeground(Color.white);
 		empleado.setFont(new Font("TimesNewRoman", Font.BOLD, 14));

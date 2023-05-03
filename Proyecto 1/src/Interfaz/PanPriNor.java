@@ -8,13 +8,15 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class PanPriNor extends JPanel implements ActionListener{
+	 private String titulo;
 
-	public PanPriNor() {
+
+	public PanPriNor(String titulo_pantalla) {
 		
 		setLayout(new GridLayout(3, 3));
 		
 		//Apartado del Titulo
-		JTextField titulo = new JTextField("SISTEMA HOTEL");
+		JTextField titulo = new JTextField(titulo_pantalla);
 		titulo.disable();
 		titulo.setForeground(Color.WHITE);
 		titulo.setHorizontalAlignment(SwingConstants.CENTER);
