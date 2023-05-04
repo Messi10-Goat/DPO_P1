@@ -30,6 +30,10 @@ public class PanPriCen extends JPanel implements ActionListener{
 		empleado.setForeground(Color.white);
 		empleado.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		empleado.setBorderPainted(false);
+		if (BotonIzq == "Administrador") {
+			admin.setActionCommand("pantalla admin");
+			admin.addActionListener(this);
+		}
 		
 		//empleado.setOpaque(false);
 		//empleado.setFocusPainted(false);
@@ -109,9 +113,16 @@ public class PanPriCen extends JPanel implements ActionListener{
 	}
 	
 	
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		String comando = e.getActionCommand();
+		if(comando.equals("pantalla admin")) {
+			new PantallaAdministrador();
+		}
+		
 		
 	}
 

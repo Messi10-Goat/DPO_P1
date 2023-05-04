@@ -17,7 +17,7 @@ public class Huesped {
 	private List<Plato> Platos_consumidos = new ArrayList();
 	private List<Pago> Pagos_hechos = new ArrayList();
 	private List<Pago> Pagos_pendientes = new ArrayList();
-	private boolean menoresCuatroAños;
+	private boolean menoresCuatroAnos;
 	private int numeroHuespedes;
 	
 	

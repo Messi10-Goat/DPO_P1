@@ -8,11 +8,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 public class PantallaAdministrador extends JFrame implements ActionListener{
-	private PanAdmNor panAdmNor;
-	private PanAdmWes panAdmWes;
-	private PanAdmCen panAdmCen;
-	private PanAdmEas panAdmEas;
-	private PanAdmSou panAdmSou;
+	private PanPriNor panAdmNor;
+	private PanPriWes panAdmWes;
+	private PanTribotonCen panAdmCen;
+	private PanPriEas panAdmEas;
+	private PanPriSou panAdmSou;
 	
  public PantallaAdministrador() {
 		
@@ -24,7 +24,7 @@ public class PantallaAdministrador extends JFrame implements ActionListener{
 		PanPriWes panPriWes = new PanPriWes();
 		add(panPriWes, BorderLayout.WEST);
 		
-		PanPriCen panPriCen = new PanPriCen();
+		PanTribotonCen panPriCen = new PanTribotonCen("Habitacion","Tarifa","Plato");
 		add(panPriCen, BorderLayout.CENTER);
 		
 		PanPriEas panPriEas = new PanPriEas();

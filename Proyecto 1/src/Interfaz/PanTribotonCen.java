@@ -17,7 +17,8 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 	private String BotonCen;
 	
 	public PanTribotonCen(String BotonIzq, String BotonDer, String BotonCen) {
-setLayout(new GridLayout(3, 7));
+		
+		setLayout(new GridLayout(3, 7));
 		
 		//Principal
 		
@@ -97,41 +98,52 @@ setLayout(new GridLayout(3, 7));
 		//Add
 	
 		for(int i = 0; i<=esp.size(); i++) {
-			if (i == 8) {
+			if (i == 9) {
 				
 				add(izq);
 				
-			} else if (i < 6){
+			} else if (i < 9){
 				JTextField el = esp.get(i); 
 				el.setBackground(Color.WHITE);
 				el.setBorder(null);
 				el.disable();
 				add(el);
 				
-			} else if ((i == 9)||(i=11)){
+			} else if (i == 10) {
 				JTextField el = esp.get(i-1); 
 				el.setBackground(Color.WHITE);
 				el.setBorder(null);
 				el.disable();
 				add(el);
-				
-			} else if (i == 10) {
+			}
+			
+			else if (i == 11) {
 				
 				add(cen);
 				
-			} else if (i == 12) {
-				add(der);
-			}else {
-			}
+			}  else if (i == 12) {
 				JTextField el = esp.get(i-2); 
 				el.setBackground(Color.WHITE);
+			el.setBorder(null);
+			el.disable();
+			add(el);
+			
+			
+			} else if (i == 13) {
+				
+				add(der);
+				
+			} else {
+				JTextField el = esp.get(i-3); 
+				el.setBackground(Color.RED);
 				el.setBorder(null);
 				el.disable();
 				add(el);
 			}
 		}
+		}
 		
-	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

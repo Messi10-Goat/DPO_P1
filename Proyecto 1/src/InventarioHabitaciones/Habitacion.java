@@ -31,10 +31,6 @@ public class Habitacion {
 		this.extras=extras2;
 	}
 	
-	public Habitacion() {
-		
-	}
-
 	public void actualizarInformacionInventario() {
 		
 	}
