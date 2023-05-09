@@ -189,7 +189,7 @@ public class CatalogoRegistro {
 	}
 	
 	public void crearReserva( Habitacion habitacion_reserva, String fecha_inicio, String fecha_final, String nombre, int cedula, String correo, int numero_personas){
-		Habitacion hab = new Habitacion();
+		Habitacion hab = new Habitacion(numero_personas, correo, correo, correo, correo);
 		String rango_fecha = fecha_inicio + "-" + fecha_final;
 		habitacion_reserva.getReservas().add(rango_fecha);
 		int codigo_reserva = reservas.size();

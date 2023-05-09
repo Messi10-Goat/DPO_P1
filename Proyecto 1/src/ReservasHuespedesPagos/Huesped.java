@@ -51,11 +51,11 @@ public class Huesped {
 	}
 
 	public boolean isMenoresCuatroAños() {
-		return menoresCuatroAños;
+		return isMenoresCuatroAños();
 	}
 
 	public void setMenoresCuatroAños(boolean menoresCuatroAños) {
-		this.menoresCuatroAños = menoresCuatroAños;
+		this.menoresCuatroAnos = menoresCuatroAños;
 	}
 
 	public boolean isAdultosMayores() {
