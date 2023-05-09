@@ -21,6 +21,9 @@ public class PanPriSou extends JPanel implements ActionListener{
 		salir.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		salir.setBorderPainted(false);
 		
+		salir.setActionCommand("salir");
+		salir.addActionListener(this);
+		
 		//Apartado Espacios
 		ArrayList<JTextField> esp = new ArrayList<JTextField>();
 		
@@ -70,6 +73,12 @@ public class PanPriSou extends JPanel implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
+		String comando = e.getActionCommand();
+		
+		if (comando.equals("salir")) {
+			new PantallaPrincipal("Administrador", "Empleado");
+		}
 		
 	}
 

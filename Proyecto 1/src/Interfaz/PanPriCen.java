@@ -11,7 +11,7 @@ public class PanPriCen extends JPanel implements ActionListener{
 	private String BotonIzq;
 	private String BotonDer;
 	
-		
+	private PantallaPrincipal panPri;	
 
 	public PanPriCen(String BotonIzq,String BotonDer) {
 		
@@ -125,6 +125,7 @@ public class PanPriCen extends JPanel implements ActionListener{
 		String comando = e.getActionCommand();
 		if(comando.equals("pantalla admin")) {
 			new PantallaAdministrador();
+			panPri.setVisible(false);
 		} 
 		else if (comando.equals("pantalla empleado"))
 		{

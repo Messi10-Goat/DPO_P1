@@ -16,7 +16,7 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 	private String BotonDer;
 	private String BotonCen;
 	
-	public PanTribotonCen(String BotonIzq, String BotonDer, String BotonCen) {
+	public PanTribotonCen(String BotonIzq, String BotonCen, String BotonDer) {
 		
 		setLayout(new GridLayout(3, 7));
 		
@@ -28,17 +28,28 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 		izq.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		izq.setBorderPainted(false);
 		
-		JButton cen = new JButton(BotonDer);
+		izq.setActionCommand(BotonIzq);
+		izq.addActionListener(this);
+		
+		JButton cen = new JButton(BotonCen);
 		cen.setBackground(Color.magenta);
 		cen.setForeground(Color.white);
 		cen.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		cen.setBorderPainted(false);
+		
+		cen.setActionCommand(BotonCen);
+		cen.addActionListener(this);
 		
 		JButton der = new JButton(BotonDer);
 		der.setBackground(Color.magenta);
 		der.setForeground(Color.white);
 		der.setFont(new Font("TimesNewRoman", Font.BOLD, 14));
 		der.setBorderPainted(false);
+		
+		der.setActionCommand(BotonDer);
+		der.addActionListener(this);
+		
+		
 		
 		//empleado.setOpaque(false);
 		//empleado.setFocusPainted(false);
@@ -148,6 +159,22 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
+		String com = e.getActionCommand();
+		
+		if (com.equals("Habitacion")) {
+			
+			new PantallaHabitacion();
+			
+		} else if (com.equals("Plato")) {
+			
+			new PantallaPlato();
+			
+		} else if (com.equals("Tarifa")) {
+			
+			new PantallaTarifa();
+			
+		}
 		
 	}
 	
