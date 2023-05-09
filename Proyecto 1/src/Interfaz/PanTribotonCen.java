@@ -98,18 +98,18 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 		//Add
 	
 		for(int i = 0; i<esp.size(); i++) {
-			if (i == 9) {
+			if (i == 8) {
 				
 				add(izq);
 				
-			} else if (i < 9){
+			} else if (i < 8){
 				JTextField el = esp.get(i); 
 				el.setBackground(Color.WHITE);
 				el.setBorder(null);
 				el.disable();
 				add(el);
 				
-			} else if (i == 10) {
+			} else if (i == 9) {
 				JTextField el = esp.get(i-1); 
 				el.setBackground(Color.WHITE);
 				el.setBorder(null);
@@ -117,11 +117,11 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 				add(el);
 			}
 			
-			else if (i == 11) {
+			else if (i == 10) {
 				
 				add(cen);
 				
-			}  else if (i == 12) {
+			}  else if (i == 11) {
 				JTextField el = esp.get(i-2); 
 				el.setBackground(Color.WHITE);
 			el.setBorder(null);
@@ -129,13 +129,13 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 			add(el);
 			
 			
-			} else if (i == 13) {
+			} else if (i == 12) {
 				
 				add(der);
 				
 			} else {
 				JTextField el = esp.get(i-3); 
-				el.setBackground(Color.RED);
+				el.setBackground(Color.WHITE);
 				el.setBorder(null);
 				el.disable();
 				add(el);
