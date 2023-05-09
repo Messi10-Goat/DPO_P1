@@ -97,7 +97,7 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 		
 		//Add
 	
-		for(int i = 0; i<=esp.size(); i++) {
+		for(int i = 0; i<esp.size(); i++) {
 			if (i == 9) {
 				
 				add(izq);

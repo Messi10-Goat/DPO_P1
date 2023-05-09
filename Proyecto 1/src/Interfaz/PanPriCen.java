@@ -34,6 +34,10 @@ public class PanPriCen extends JPanel implements ActionListener{
 			admin.setActionCommand("pantalla admin");
 			admin.addActionListener(this);
 		}
+		if (BotonDer == "Empleado") {
+			empleado.setActionCommand("pantalla empleado");
+			empleado.addActionListener(this);
+		}
 		
 		//empleado.setOpaque(false);
 		//empleado.setFocusPainted(false);
@@ -121,6 +125,10 @@ public class PanPriCen extends JPanel implements ActionListener{
 		String comando = e.getActionCommand();
 		if(comando.equals("pantalla admin")) {
 			new PantallaAdministrador();
+		} 
+		else if (comando.equals("pantalla empleado"))
+		{
+			new PantallaPrincipal("Centro reservas","Centro pagos");
 		}
 		
 		

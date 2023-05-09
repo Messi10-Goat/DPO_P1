@@ -19,8 +19,10 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 	private PanPriCen panPriCen;
 	private PanPriEas panPriEas;
 	private PanPriSou panPriSou;
+	private String Botonder;
+	private String Botonizq;
 	
-	public PantallaPrincipal() {
+	public PantallaPrincipal(String Botonizq, String Botonder) {
 		
 		setLayout(new BorderLayout());
 		
@@ -30,7 +32,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 		PanPriWes panPriWes = new PanPriWes();
 		add(panPriWes, BorderLayout.WEST);
 		
-		PanPriCen panPriCen = new PanPriCen("Administrador","Empleado");
+		PanPriCen panPriCen = new PanPriCen(Botonizq,Botonder);
 		add(panPriCen, BorderLayout.CENTER);
 		
 		PanPriEas panPriEas = new PanPriEas();
@@ -56,7 +58,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new PantallaPrincipal();
+		new PantallaPrincipal("Administrador","Empleado");
 	}
 
 
