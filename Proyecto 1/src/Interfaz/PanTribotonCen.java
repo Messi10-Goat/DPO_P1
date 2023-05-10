@@ -174,6 +174,18 @@ public class PanTribotonCen extends JPanel implements ActionListener{
 			
 			new PantallaTarifa();
 			
+		} else if (com.equals("Cargar")) {	
+		
+			new PantallaCargarArchivo();
+			
+		} else if (com.equals("Crear")) {
+			
+			new PantallaCrearTarifa();
+			
+		} else if (com.equals("Cambiar")) {
+			
+			new PantallaCambiarTarifa();
+			
 		}
 		
 	}

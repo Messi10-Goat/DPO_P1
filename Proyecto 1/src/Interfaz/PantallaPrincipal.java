@@ -1,5 +1,7 @@
 package Interfaz;
 
+import ReservasHuespedesPagos.Reserva;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,6 +23,8 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 	private PanPriSou panPriSou;
 	private String Botonder;
 	private String Botonizq;
+	
+	private static Reserva reserva;
 	
 	public PantallaPrincipal(String Botonizq, String Botonder) {
 		
@@ -59,6 +63,14 @@ public class PantallaPrincipal extends JFrame implements ActionListener{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new PantallaPrincipal("Administrador","Empleado");
+		
+		try {
+			reserva.contarReservas();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 

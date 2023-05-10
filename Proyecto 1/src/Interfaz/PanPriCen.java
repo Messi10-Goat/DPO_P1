@@ -33,11 +33,30 @@ public class PanPriCen extends JPanel implements ActionListener{
 		if (BotonIzq == "Administrador") {
 			admin.setActionCommand("pantalla admin");
 			admin.addActionListener(this);
+		} else if (BotonIzq == "Crear") {
+			admin.setActionCommand("crear");
+			admin.addActionListener(this);
+		} else if (BotonIzq == "Centro Reservas") {
+			admin.setActionCommand("centroRes");
+			admin.addActionListener(this);
+		} else {
+			
 		}
+		
 		if (BotonDer == "Empleado") {
 			empleado.setActionCommand("pantalla empleado");
 			empleado.addActionListener(this);
-		}
+		} else if (BotonIzq == "Cargar") {
+			empleado.setActionCommand("Cargar");
+			empleado.addActionListener(this);
+		} else if (BotonIzq == "Centro Pagos") {
+			empleado.setActionCommand("centroPag");
+			empleado.addActionListener(this);
+		} else {}
+		
+		empleado.setActionCommand(BotonDer);
+		empleado.addActionListener(this);
+		
 		
 		//empleado.setOpaque(false);
 		//empleado.setFocusPainted(false);
@@ -130,6 +149,15 @@ public class PanPriCen extends JPanel implements ActionListener{
 		else if (comando.equals("pantalla empleado"))
 		{
 			new PantallaPrincipal("Centro reservas","Centro pagos");
+		
+		} else if (comando.equals("Crear")) {
+			
+			new PantallaCrearHabit();
+			
+		} else if (comando.equals("Cargar")) {
+			
+			new PantallaCambiarHabit();
+			
 		}
 		
 		
