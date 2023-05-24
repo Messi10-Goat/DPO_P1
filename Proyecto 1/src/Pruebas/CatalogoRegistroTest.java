@@ -3,6 +3,7 @@ package Pruebas;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 import java.time.Duration;
+import java.util.HashMap;
 
 import CatalogoServiciosyRegistroConsumos.CatalogoRegistro;
 import InventarioHabitaciones.Habitacion;
@@ -27,9 +28,9 @@ public class CatalogoRegistroTest {
 		
 	}
 	
-	public void testCrearNuevasHab(int capacidad, String id, String tipo, String ubi, String extras) {
+	public void testCrearNuevasHab(int capacidad, String id, String tipo, String ubi, String extras, HashMap<String, String> caracteristicas) {
 		
-		assertTimeout(Duration.ofMinutes(1), () -> {catReg.crearNuevasHabitaciones(capacidad, id, tipo, ubi, extras);});
+		assertTimeout(Duration.ofMinutes(1), () -> {catReg.crearNuevasHabitaciones(capacidad, id, tipo, ubi, extras, caracteristicas);});
 		
 	}
 	

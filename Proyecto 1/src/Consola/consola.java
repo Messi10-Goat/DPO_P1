@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -123,8 +124,10 @@ public class consola {
 							Scanner ex = new Scanner(System.in);
 							String extras = ex.nextLine();
 							
+							HashMap<String, String> caracteristicas = new HashMap<String, String>();
+							
 							CatalogoRegistro cat = new CatalogoRegistro();
-							cat.crearNuevasHabitaciones(capacidad,identificador,tipo,ubicacion,extras);
+							cat.crearNuevasHabitaciones(capacidad,identificador,tipo,ubicacion,extras, caracteristicas);
 						
 						} else if (opcion1 == 0){
 							

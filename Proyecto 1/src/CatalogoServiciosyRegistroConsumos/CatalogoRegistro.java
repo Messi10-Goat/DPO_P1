@@ -5,14 +5,18 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import CatalogoServiciosyRegistroConsumos.Plato;
 import CatalogoServiciosyRegistroConsumos.Tarifa;
+import Excepciones.HabitacionExcpecion;
 import InventarioHabitaciones.Habitacion;
 import ReservasHuespedesPagos.Reserva;
+
+import Excepciones.HabitacionExcpecion;
 
 @SuppressWarnings("unused")
 public class CatalogoRegistro {
@@ -42,6 +46,7 @@ public class CatalogoRegistro {
 		String habitacion = archivoHabit.readLine();
 		
 		while(habitacion != null) {
+			
 			String[] partesHabit = habitacion.split(";");
 			System.out.println("nuevaLinea: "+habitacion);
 			int capacidad = parseInt(partesHabit[0]); 
@@ -50,7 +55,37 @@ public class CatalogoRegistro {
 			String ubicacion = partesHabit[3];
 			String extras = partesHabit[4];
 			
-			Habitacion nuevaH = new Habitacion(capacidad, identificador, tipo, ubicacion, extras);
+			String tam = partesHabit[5];
+			String aire = partesHabit[6];
+			String cal = partesHabit[7];
+			String cam = partesHabit[8];
+			String tv = partesHabit[9];
+			String caf = partesHabit[10];
+			String rYt = partesHabit[11];
+			String pla = partesHabit[12];
+			String sec = partesHabit[13];
+			String ac = partesHabit[14];
+			String usbA = partesHabit[15];
+			String usbC = partesHabit[16];
+			String des = partesHabit[17];
+			
+			HashMap<String, String> caracteristicas = new HashMap<String, String>();
+			caracteristicas.put("Tamaño (m2)", tam);
+			caracteristicas.put("Aire acondicionado", aire);
+			caracteristicas.put("Calefacción", cal);
+			caracteristicas.put("Tamaño cama", cam);
+			caracteristicas.put("TV", tv);
+			caracteristicas.put("Cafetera", caf);
+			caracteristicas.put("Ropa de Cama & Tapetes Hipoalergenicos", rYt);
+			caracteristicas.put("Plancha", pla);
+			caracteristicas.put("Secador de Pelo", sec);
+			caracteristicas.put("Voltaje AC", ac);
+			caracteristicas.put("Tomas USB-A", usbA);
+			caracteristicas.put("Tomas USB-C", usbC);
+			caracteristicas.put("Desayuno", des);
+			
+			
+			Habitacion nuevaH = new Habitacion(capacidad, identificador, tipo, ubicacion, extras, caracteristicas);
 			habitaciones.add(nuevaH);
 			
 			System.out.println(nuevaH);
@@ -100,8 +135,8 @@ public class CatalogoRegistro {
 	}
    
 
-	public void crearNuevasHabitaciones(int capacidad, String identificador, String tipo, String ubicacion, String extras) {
-		Habitacion nuevaH = new Habitacion(capacidad, identificador, tipo, ubicacion, extras);
+	public void crearNuevasHabitaciones(int capacidad, String identificador, String tipo, String ubicacion, String extras, HashMap<String, String> caracteristicas) {
+		Habitacion nuevaH = new Habitacion(capacidad, identificador, tipo, ubicacion, extras, caracteristicas);
 		habitaciones.add(nuevaH);
 	}
 	
@@ -189,7 +224,7 @@ public class CatalogoRegistro {
 	}
 	
 	public void crearReserva( Habitacion habitacion_reserva, String fecha_inicio, String fecha_final, String nombre, int cedula, String correo, int numero_personas){
-		Habitacion hab = new Habitacion(numero_personas, correo, correo, correo, correo);
+		Habitacion hab = new Habitacion(numero_personas, correo, correo, correo, correo, null);
 		String rango_fecha = fecha_inicio + "-" + fecha_final;
 		habitacion_reserva.getReservas().add(rango_fecha);
 		int codigo_reserva = reservas.size();

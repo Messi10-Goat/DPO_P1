@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class Habitacion {
 	
 	//Métodos
 	
-	public Habitacion(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2) {
+	public Habitacion(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2, HashMap<String, String> caracteristicas) {
 		this.capacidad=capacidad2;
 		this.identificador=identificador2;
 		this.tipo=tipo2;

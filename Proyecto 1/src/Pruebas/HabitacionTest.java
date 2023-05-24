@@ -3,6 +3,7 @@ package Pruebas;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 import java.time.Duration;
+import java.util.HashMap;
 
 import InventarioHabitaciones.Habitacion;
 
@@ -10,9 +11,9 @@ public class HabitacionTest {
 
 	private Habitacion habit;
 	
-	public void setUp(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2) throws Exception{
+	public void setUp(int capacidad2, String identificador2, String tipo2, String ubicacion2, String extras2, HashMap<String, String> caracteristicas) throws Exception{
 		
-		habit = new Habitacion(capacidad2, identificador2, tipo2, ubicacion2, extras2);
+		habit = new Habitacion(capacidad2, identificador2, tipo2, ubicacion2, extras2, caracteristicas);
 		
 	}
 	

@@ -1,19 +1,19 @@
-Capacidad;Identificador;Tipo;Ubicacion;Extras
-6;848hsd;Estándar;PrimerPiso;Balcón
-4;945asd;Suite;TercerPiso;Vista
-5;153hen;SuiteDoble;SextoPiso;Cocina Integrada
-3;437ens;Estándar;ÚltimoPiso;Balcón y Vista
-7;910new;SuiteDoble;PrimerPiso;Vista y Cocina Integrada
-3;153hen;SuiteDoble;SegundoPiso;Cocina Integrada y Balcon
-2;301pwn;Estándar;SeptimoPiso;No
-4;912aos;Estándar;TercerPiso;Vista, Balcón y Cocina Integrada
-5;217dsm;SuiteDoble;PrimerPiso;Vista
-4;438nqw;Estándar;PrimerPiso;No
-3;037sdj;Suite;CuartoPiso;Vista
-2;937dnm;SuiteDoble;SextoPiso;Cocina Integrada
-2;209dsf;Estándar;SegundoPiso;Balcón y Vista
-6;420pen;SuiteDoble;OctavoPiso;Vista y Cocina Integrada
-5;023dla;SuiteDoble;QuintoPiso;No
-2;710sns;Estándar;SeptimoPiso;No
-3;291nas;Estándar;ÚltimoPiso;Balcón y Cocina Integrada
-2;019san;SuiteDoble;ÚltimoPiso;Vista
+Capacidad;Identificador;Tipo;Ubicacion;Extras;Tamano;Aire;Calefaccion;Cama;TV;Cafetera;Ropa&Tapetes;Plancha;SecadorPelo;VoltajeAC;USB-A;USB-C;Desayuno
+6;848hsd;Estándar;PrimerPiso;Balcón;25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+4;945asd;Suite;TercerPiso;Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+5;153hen;SuiteDoble;SextoPiso;Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+3;437ens;Estándar;ÚltimoPiso;Balcón y Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+7;910new;SuiteDoble;PrimerPiso;Vista y Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+3;153hen;SuiteDoble;SegundoPiso;Cocina Integrada y Balcon25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+2;301pwn;Estándar;SeptimoPiso;No25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+4;912aos;Estándar;TercerPiso;Vista, Balcón y Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+5;217dsm;SuiteDoble;PrimerPiso;Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+4;438nqw;Estándar;PrimerPiso;No25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+3;037sdj;Suite;CuartoPiso;Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+2;937dnm;SuiteDoble;SextoPiso;Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+2;209dsf;Estándar;SegundoPiso;Balcón y Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+6;420pen;SuiteDoble;OctavoPiso;Vista y Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+5;023dla;SuiteDoble;QuintoPiso;No25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+2;710sns;Estándar;SeptimoPiso;No25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+3;291nas;Estándar;ÚltimoPiso;Balcón y Cocina Integrada25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
+2;019san;SuiteDoble;ÚltimoPiso;Vista25;si;si;2x2;si;si;si;si;si;si;si/4;si/5;si
