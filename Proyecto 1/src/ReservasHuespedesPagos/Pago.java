@@ -11,6 +11,9 @@ public class Pago {
 	private String servicio;
 	private String estado;
 	
+	public Pago(double precio, String metodoPago, int numeroCuotas, String servicio, String estado) {
+		
+	}
 	
 	//Métodos
 	
@@ -18,15 +21,15 @@ public class Pago {
 		
 	}
 	
-	private void pedirReembolso() {
+	public void pedirReembolso() {
 		
 	}
 	
-	private void modificarCuotas() {
+	public void modificarCuotas() {
 		
 	}
 	
-	private void agregarPropina() {
+	public void agregarPropina() {
 		
 	}
 	

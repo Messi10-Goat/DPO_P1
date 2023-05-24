@@ -30,16 +30,16 @@ public class Plato {
 	}
 	
 	
-	private void lugaresHotel() {
+	public void lugaresHotel() {
 		
 	}
 	
-	private void disponibilidadRestaurante() {
+	public void disponibilidadRestaurante() {
 		
 	}
 	
 	
-	private void horarioReservas() {
+	public void horarioReservas() {
 		
 	}
 	

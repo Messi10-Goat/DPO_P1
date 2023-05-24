@@ -46,7 +46,7 @@ public class Habitacion {
 		
 		
 	}
-    private void filtrarHabitacionesporCapacidadyTipo(String tipo,int capacidad) {
+    public void filtrarHabitacionesporCapacidadyTipo(String tipo,int capacidad) {
     	
     }
 	public void cancelarHabitacion() {

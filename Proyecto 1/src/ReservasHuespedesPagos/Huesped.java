@@ -27,15 +27,15 @@ public class Huesped {
 		
 	}
 	
-	private void consultarNumeroHuespedes() {
+	public void consultarNumeroHuespedes() {
 		
 	}
 	
-	private void betarHuesped() {
+	public void betarHuesped() {
 		
 	}
 	
-	private void enviarEncuesta() {
+	public void enviarEncuesta() {
 		
 	}
 	

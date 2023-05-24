@@ -24,11 +24,11 @@ public class Tarifa {
 		
 	}
 
-	private void asginarTarifa() {
+	public void asignarTarifa() {
 		
 	}
 	
-	private void fijarTarifa() {
+	public void fijarTarifa() {
 		
 	}
 	
